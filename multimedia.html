@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multimedia</title>
+    <link rel="website icon" href="imgs/app-development.png">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <section class="contenido">
+        <h1>Página web sobre multimedia</h1>
+        <h2>Video</h2>
+        <div class="buttons">
+            <ul id="ul">
+                <li><a id="pausar">Play</a></li>
+                <li><a id="grande">Grande</a></li>
+                <li><a id="pequeno">Pequeño</a></li>
+                <li><a id="normal">Normal</a></li>
+            </ul>
+        </div>
+        <figure class="video">
+            <video id="video" width="320" height="240" controls>
+                <source
+                    src="imgs/saveinsta.cc_1080p-jugando-con-mini-cha-cha-mini-chicky-y-mini-boom-boom-d-billions-canciones-infantiles.mp4"
+                    type="video/mp4">
+                Tu navegador no soporta este formato de video.
+            </video>
+        </figure>
+        <h2>Audio</h2>
+        <figure>
+            <audio controls>
+                <source src="imgs/Aprende la letra H con Hugo - El abecedario.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </figure>
+        <h2>Video YT</h2>
+        <iframe width="420" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=0">
+        </iframe>
+        </iframe>
+        <h2>Imagen</h2>
+        <object data="imgs/app-development.png" type=""></object>
+    </section>
+
+    <script>
+        let video = document.getElementById("video");
+        let buttonPausar = document.getElementById("pausar");
+        let buttonGrande = document.getElementById("grande");
+        let buttonPequeno = document.getElementById("pequeno");
+        let buttonNornmal = document.getElementById("normal");
+
+        buttonPausar.addEventListener("click", function () {
+            if (video.paused) {
+                video.play();
+            } else {
+                video.pause();
+            }
+        })
+
+        buttonGrande.addEventListener("click", function () {
+            video.width = 560;
+            video.height = 480;
+        })
+
+        buttonPequeno.addEventListener("click", function () {
+            video.width = 220;
+            video.height = 140;
+            
+        })
+
+        buttonNornmal.addEventListener("click", function () {
+            video.width = 320;
+            video.height = 240;
+        })
+    </script>
+</body>
+
+</html>
